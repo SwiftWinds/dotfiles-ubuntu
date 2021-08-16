@@ -19,3 +19,7 @@
 	tool = bc3
 [mergetool "bc3"]
 	trustExitCode = true
+[init]
+	defaultBranch = main
+[push]
+	default = current

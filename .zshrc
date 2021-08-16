@@ -128,3 +128,6 @@ if [ -n "$PYTHONPATH" ]; then
 else
     export PYTHONPATH='/home/mateo/.local/share/pdm/venv/lib/python3.8/site-packages/pdm/pep582'
 fi
+
+# Add cudatoolkit to LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-11.4/lib64
