@@ -130,4 +130,4 @@ else
 fi
 
 # Add cudatoolkit to LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-11.4/lib64
+export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64"
