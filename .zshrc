@@ -124,10 +124,14 @@ unset __conda_setup
 
 # PDM
 if [ -n "$PYTHONPATH" ]; then
-    export PYTHONPATH='/home/mateo/.local/share/pdm/venv/lib/python3.8/site-packages/pdm/pep582':$PYTHONPATH
+    export PYTHONPATH='/home/linuxbrew/.linuxbrew/Cellar/pdm/1.8.0/libexec/lib/python3.9/site-packages/pdm/pep582':$PYTHONPATH
 else
-    export PYTHONPATH='/home/mateo/.local/share/pdm/venv/lib/python3.8/site-packages/pdm/pep582'
+    export PYTHONPATH='/home/linuxbrew/.linuxbrew/Cellar/pdm/1.8.0/libexec/lib/python3.9/site-packages/pdm/pep582'
 fi
 
 # Add cudatoolkit to LD_LIBRARY_PATH
-export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64"
+if [ -n "$LD_LIBRARY_PATH" ]; then
+    export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH"
+else
+    export LD_LIBRARY_PATH="/usr/local/cuda-11.4/lib64"
+fi
