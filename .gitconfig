@@ -23,3 +23,7 @@
 	defaultBranch = main
 [push]
 	default = current
+[color]
+	ui = auto
+[mergetool]
+	keepBackup = false
